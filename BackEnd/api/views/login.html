@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: purple;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+        h2 {
+            font-size: 20px;
+            color: white;
+            margin: 5px 0 0;
+            text-align: center;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: lavender; /* Faixa lilás */
+            padding: 5px 20px; /* Faixa fina */
+        }
+        .nav-left {
+            display: flex;
+            gap: 30px; /* Aumentando o espaçamento entre os links */
+        }
+        .icon {
+            color: black; /* Cor do texto dos links */
+            text-decoration: none;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
+        .login-container {
+            background-color: beige;
+            padding: 60px; /* Aumentado para um quadrado maior */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largura aumentada */
+            margin: 50px auto; /* Centraliza na página */
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #e6e6fa; /* Campos lilás */
+            font-size: 16px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Botão verde */
+            color: black; /* Texto preto */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+        }
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        h2 {
+            color: black; /* Palavra "Login" em preto */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Auto Feed</h1>
+    <h2>Utilize seu tempo onde ele merece ser gasto.</h2>
+</header>
+
+<div class="nav-bar">
+    <nav class="nav-left">
+        <a href="sobre.html" class="icon">Sobre</a>
+        <a href="feedbacks.html" class="icon">FeedBacks</a>
+        <a href="empresa.html" class="icon">Empresa</a>
+        <a href="usuario.html" class="icon">Usuário</a>
+    </nav>
+    <div class="nav-right">
+        <a href="login.html" class="icon">Login</a>
+    </div>
+</div>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Usuário" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    <div class="link">
+        <p>Ainda não tem uma conta? <a href="criar_conta.html">Criar conta</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Auto Feed. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
