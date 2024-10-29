@@ -1,5 +1,5 @@
 var mysql = require("mysql2");
-var database = "nome do banco";
+var database = "pi";
 
 var conexao = mysql.createConnection({
     user: 'root',
