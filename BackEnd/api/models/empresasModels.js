@@ -11,13 +11,12 @@ module.exports = {
 
 }
 
-
 function getAll(callback){
     conexao.query("select * from empresas", callback)
 }
 
 function getById(codigo,callback) {
-    conexao.query("Select * from empresas where liv_codigo = " + codigo, callback)
+    conexao.query("Select * from empresas where id_empresa = " + codigo, callback)
 }
 
 function create (dados, callback) {
@@ -26,7 +25,7 @@ function create (dados, callback) {
 }
 
 function update (dados, codigo, callback) {
-    var msql = `UPDATE empresas SET ? WHERE liv_codigo = ${codigo}`  
+    var msql = `UPDATE empresas SET ? WHERE id_empresa = ${codigo}`  
          
     console.log(msql)
     conexao.query(msql,dados, (erro,callback) => {

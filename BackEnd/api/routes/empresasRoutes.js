@@ -4,7 +4,7 @@ const router = express.Router();
 
 const controllerEmpresas = require('../controllers/empresasControllers');
 
-router.get("/", controllerEmpresas.getAll);
+router.get("/emp", controllerEmpresas.getAll);
 router.get("/:id", controllerEmpresas.getById);
 router.post("/", controllerEmpresas.create);
 router.put("/:id", controllerEmpresas.update);

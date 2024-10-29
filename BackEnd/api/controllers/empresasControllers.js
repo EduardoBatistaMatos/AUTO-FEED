@@ -25,11 +25,11 @@ function getAll(req,res) {
         }
     })
 };
+    
 
 function getById(req, res){
     var cod = req.params.id;
     empresasModels.getById(cod, function (err, resultado){
-        console.log("Dados: ", resultado[0])
         console.log("empresas foi lido...")
         if(err){
             throw err;
