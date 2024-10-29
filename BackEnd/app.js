@@ -22,9 +22,6 @@ app.set('views', './api/views');
 // Define a porta em que o servidor irá escutar
 const port = 3000;
 
-
-
-
 // Configuração de arquivos estáticos
 app.use('/static', express.static(__dirname + '/public'));
 app.use(express.static('public'));

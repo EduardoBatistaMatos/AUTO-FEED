@@ -7,8 +7,7 @@ const controllerEmpresas = require('../controllers/empresasControllers');
 router.get("/emp", controllerEmpresas.getAll);
 router.get("/:id", controllerEmpresas.getById);
 router.post("/", controllerEmpresas.create);
-router.put("/:id", controllerEmpresas.update);
-router.delete("/:id", controllerEmpresas.remove);
+
 
 
 console.log("Rotas de Empresas")

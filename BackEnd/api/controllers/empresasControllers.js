@@ -4,8 +4,7 @@ module.exports = {
     getAll,
     getById,
     create,
-    update,
-    remove
+    
 }
 
 function getAll(req,res) {
@@ -57,36 +56,3 @@ function create(req,res){
             }
         })
 }
-
-
-function update(req,res) {
-    console.log("Alterando registro de empresas...")
-    var cod = req.params.id;
-    var dados = req.body;
-    console.log(req.body)
-    console.log("Código: " + cod)
-    empresasModels.update(dados, cod, function(err,resultado){
-        if(err){
-            throw err
-        } else {
-            res.redirect('/')
-        }
-    })
-
-}
-
-function remove(req, res){
-    var cod = req.params.id;
-    empresasModels.remove(cod, function (err, resultado){
-        console.log("Livro Removido: ", resultado[0])
-        console.log("empresas foi removido...")
-        if(err){
-            throw err;
-        }
-        else{
-            return res.json(resultado)
-        }
-    })
-
-}
-
