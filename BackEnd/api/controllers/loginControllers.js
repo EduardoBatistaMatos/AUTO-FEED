@@ -13,19 +13,19 @@ function login(req, res) {
 }
 
 function validarPSW(req, res) {
-    m_usuario = req.body.login;
-    m_senha = req.body.senha;
-    console.log("Usuário: " + m_usuario);
-    console.log("Senha: " + m_senha);
-    
-    loginModels.validarPSW(m_usuario, m_senha, function(erro, result) {
+    const usuario = req.body.usuario;
+    const senha = req.body.senha;
+    console.log("Usuário recebido: " + usuario);
+    console.log("Senha recebida: " + senha);
+
+    loginModels.validarPSW(usuario, senha, function(erro, results) {
         if (erro) {
             throw erro;
         }
 
-        if (result.usu_apelido === m_usuario && result.usu.password === m_senha) {
+        if (results.length > 0) {
             console.log("Usuário Válido");
-            res.render("index.ejs", {
+            res.render("sobre/indexsobre", {
                 title: "Meu PI"
             });
         } else {

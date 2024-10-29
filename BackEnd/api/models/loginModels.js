@@ -7,11 +7,10 @@ module.exports = {
 }
 
 
-function validarPSW(p_login, p_senha, callback){
-
-    m_sql = "SELECT * FROM usuarios WHERE usu_apelido = '" + p_login + "' AND usu_password = '" + p_senha + "'";
-
-    console.log("SQL: "+ m_sql)
-    conexao.query(m_sql, callback)
+function validarPSW(usuario, senha, callback) {
+    const m_sql = "SELECT * FROM contas WHERE usuario = ? AND senha = ?";
+    conexao.query(m_sql, [usuario, senha], callback);
 }
+
+
  
