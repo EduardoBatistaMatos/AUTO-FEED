@@ -2,10 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-const controllerEmpresas = require('../controllers/empresasControllers');
-router.get('/indexemp', controllerEmpresas.indexEmpresas);
-
-console.log("Rotas de Empresas")
+const controllerSobre = require('../controllers/sobreControllers');
+router.get('/indexsobre', controllerSobre.indexSobre);
 
 module.exports= router
 

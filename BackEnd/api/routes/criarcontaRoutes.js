@@ -2,10 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-const controllerEmpresas = require('../controllers/empresasControllers');
-router.get('/indexemp', controllerEmpresas.indexEmpresas);
-
-console.log("Rotas de Empresas")
+const controllerCriarconta = require('../controllers/criarcontaControllers');
+router.get('/indexcriarconta', controllerCriarconta.indexCriarconta);
 
 module.exports= router
 

@@ -6,6 +6,9 @@ const app = express();
 
 // Importa as rotas 
 const empresasRoutes = require('./api/routes/empresasRoutes');
+const sobreRoutes = require('./api/routes/sobreRoutes');
+const criarcontaRoutes = require('./api/routes/criarcontaRoutes');
+const feedbacksRoutes = require('./api/routes/feedbacksRoutes');
 const loginRoutes = require('./api/routes/loginRoutes');
 const index = require('./api/routes/indexRoutes');
 
@@ -31,6 +34,9 @@ app.use(express.static('js'));
 
 // Configuração de rotas
 app.use('/empresas', empresasRoutes);
+app.use('/sobre' ,sobreRoutes);
+app.use('/criarconta' ,criarcontaRoutes);
+app.use('/feedbacks' ,feedbacksRoutes);
 app.use("/", loginRoutes);
 app.use("/", index);
 
