@@ -5,7 +5,7 @@ const router = express.Router();
 const controllerLogin = require('../controllers/loginControllers');
 
 router.get('/', controllerLogin.login);
-router.post('/validar', controllerLogin.validarPSW);
+router.post('/login', controllerLogin.validarPSW);
 
 module.exports = router
 

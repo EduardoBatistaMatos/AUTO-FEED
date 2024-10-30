@@ -8,7 +8,7 @@ module.exports = {
 
 
 function validarPSW(usuario, senha, callback) {
-    const m_sql = "SELECT * FROM contas WHERE usuario = ? AND senha = ?";
+    const m_sql = "SELECT * FROM contas WHERE usuario = '"+ usuario + "' AND  senha = '"+ senha +"'";
     conexao.query(m_sql, [usuario, senha], callback);
 }
 

@@ -4,7 +4,8 @@ module.exports = {
 
 
 function indexSobre(req, res) {
-    res.render('sobre.ejs', {
-        title:"Sobre",
-    })
+        res.render('sobre.ejs', {
+        title:"Sobre",}
+        
+    )
 }

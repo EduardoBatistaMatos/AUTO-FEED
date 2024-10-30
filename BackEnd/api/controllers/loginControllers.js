@@ -25,9 +25,8 @@ function validarPSW(req, res) {
 
         if (results.length > 0) {
             console.log("Usuário Válido");
-            res.render("sobre/indexsobre", {
-                title: "Meu PI"
-            });
+            res.render("sobre")
+            
         } else {
             console.log("Dados Inválidos!!!");
             res.render("login.ejs", {

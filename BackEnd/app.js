@@ -1,8 +1,9 @@
-// Importa o módulo 'express', que é um framework para Node.js
 const express = require('express');
+const bodyParser = require('body-parser');
 
-// Cria uma instância do aplicativo Express
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true })); // Para enviar dados do formulário
+
 
 // Importa as rotas 
 const empresasRoutes = require('./api/routes/empresasRoutes');
