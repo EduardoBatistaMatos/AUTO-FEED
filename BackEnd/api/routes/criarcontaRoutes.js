@@ -4,8 +4,7 @@ const router = express.Router();
 
 const controllerCriarconta = require('../controllers/criarcontaControllers');
 router.get('/indexcriarconta', controllerCriarconta.indexCriarconta);
-
-module.exports= router
+router.post('/criarConta', controllerCriarconta.criarConta);
 
 router.get("*", function (req, res) {
     
