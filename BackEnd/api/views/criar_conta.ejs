@@ -100,9 +100,7 @@
 
 <div class="nav-bar">
     <nav class="nav-left">
-        <a href="" class="icon">Sobre</a>                   
-        <a href="" class="icon">FeedBacks</a>                  
-        <a href="" class="icon">Empresa</a>                
+                       
         
     </nav>
     <div class="nav-right">
@@ -134,7 +132,21 @@
             <label for="confirm-password">Confirmar Senha:</label>
             <input type="password" id="confirma" name="confirma" placeholder="Confirmar Senha" required>
         </div>
-        <button type="submit" class="btn">Registrar</button>
+        
+        <button type="submit" class="btn" onclick="valida(event)">Registrar</button>
+        
+        <script>
+            function valida(event) {
+                var s = document.getElementById('senha').value;
+                var c = document.getElementById('confirma').value;
+        
+                if (s !== c) {
+                    event.preventDefault(); // Previne o envio do formulário
+                    window.alert("A senha digitada no campo de confirmação é diferente da senha digitada");
+                }
+            }
+        </script>
+               
     </form>
     <div class="link">                  
         <p>Já tem uma conta? <a href="/">Fazer login</a></p>

@@ -23,14 +23,22 @@ function criarConta(req, res) {
     console.log("Senha recebida: " + senha);
     console.log("Confirmação de senha recebida: " + confirma);
 
-    criarcontaModels.criarConta(nome, idade, usuario, senha, function(erro, results) {
+    if (senha !== confirma) {
+        console.log("O erro está aqui");
+        res.render('criar_conta.ejs');
+        
+    }
+    
+            
+
+    else{criarcontaModels.criarConta(nome, idade, usuario, senha, function(erro, results) {
         if (erro) {
             throw erro;
         }
 
         if (results.length > 0) {
             console.log("Usuário Válido");
-            res.render("sobre");
+            res.render("login");
         } else {
             console.log("Dados Inválidos!!!");
             res.render("login.ejs", {
@@ -40,3 +48,5 @@ function criarConta(req, res) {
         }
     });
 }
+}
+
