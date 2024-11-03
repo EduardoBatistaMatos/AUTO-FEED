@@ -5,7 +5,7 @@ const router = express.Router();
 const controllerFeedbacks = require('../controllers/feedbacksControllers');
 router.get('/indexfeedbacks', controllerFeedbacks.indexFeedbacks);
 
-module.exports= router
+
 
 router.get("*", function (req, res) {
     

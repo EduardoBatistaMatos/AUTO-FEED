@@ -4,10 +4,9 @@ const router = express.Router();
 
 const controllerEmpresas = require('../controllers/empresasControllers');
 router.get('/indexemp', controllerEmpresas.indexEmpresas);
+router.post('/cadastro', controllerEmpresas.cadastro);
 
 console.log("Rotas de Empresas")
-
-module.exports= router
 
 router.get("*", function (req, res) {
     

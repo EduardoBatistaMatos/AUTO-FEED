@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Empresa</title>
+    <title>Cadastro de Empresa</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: white; /* Fundo principal branco */
+            background-color: #f2f2f2; /* Fundo cinza claro */
         }
 
         header {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
             background-color: purple;
             padding: 20px;
+                    
         }
 
         h1 {
-            font-size: 36px;
-            color: white;
-            margin: 0;
+        font-size: 36px;
+        color: white;
+        margin: 0;
+        text-shadow: 
+        -2px -2px 0 rgba(0, 0, 0, 0.7),  
+        2px -2px 0 rgba(0, 0, 0, 0.7),
+        -2px 2px 0 rgba(0, 0, 0, 0.7),
+        2px 2px 0 rgba(0, 0, 0, 0.7);
         }
 
-        h2 {
-            font-size: 20px;
-            color: white;
-            margin: 5px 0 0;
-            text-align: center;
-        }
 
         .nav-bar {
             display: flex;
@@ -56,19 +56,53 @@
             align-items: center;
         }
 
-        .login-icon {
-            font-size: 18px;
-            margin-left: 20px;
-        }
-
         main {
             padding: 20px;
+            display: flex;
+            justify-content: center;
         }
 
         .content {
             background-color: beige;
-            padding: 20px;
+            padding: 40px;
             border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Largura do formulário */
+            text-align: left;
+            
+        }
+      
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #e6e6fa; /* Campos lilás */
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Botão verde */
+            color: black; /* Texto preto */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
         }
 
         footer {
@@ -76,9 +110,19 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
+        }
+        .alert {
+        background-color: #f8d7da; /* Fundo vermelho claro */
+        color: #721c24; /* Texto vermelho escuro */
+        padding: 15px;
+        border: 1px solid #f5c6cb; /* Borda vermelho claro */
+        border-radius: 4px;
+        margin-bottom: 15px; /* Espaço abaixo do alerta */
+        display: none; /* Inicialmente escondido */
+        text-align: center;
         }
     </style>
 </head>
@@ -86,34 +130,57 @@
 
 <header>
     <h1>Auto Feed</h1>
-    <h2>Utilize seu tempo onde ele merece ser gasto.</h2>
+    
 </header>
 
 <div class="nav-bar">
     <nav class="nav-left">
-        <a href="/sobre/indexsobre" class="icon">Sobre</a>                   
-        <a href="/feedbacks/indexfeedbacks" class="icon">FeedBacks</a>                  
-        <a href="/empresas/indexemp" class="icon">Empresa</a>                
-        
+        <a href="/sobre/indexsobre" class="icon">Sobre</a>
+        <a href="/feedbacks/indexfeedbacks" class="icon">FeedBacks</a>
+        <a href="/empresas/indexemp" class="icon">Empresa</a>
     </nav>
     <div class="nav-right">
-        <a href="" class="icon"></a>                        
-
+        
     </div>
 </div>
+
 <main>
     <section class="main-content">
         <div class="content">
-            <h2 style="margin-top: 0;">Cadastro de Empresa</h2> <!-- Mover para a seção bege -->
-            <p>-----------------------------------------------------------------------------------------------</p>
-            <p>Bem-vindos à Fernanda Bolos, onde os melhores sabores se encontram com a arte da confeitaria!</p>
-            <p>Nossa história é um doce conto de paixão e dedicação, iniciada nos corredores acolhedores da nossa cozinha familiar.</p>
-            <p>Tudo começou com a visão criativa e as mãos habilidosas de Dona Fernanda, que desde cedo descobriu sua afinidade pela magia dos doces. Movida pela vontade de agradar e encantar, ela começou a criar bolos simplesmente deliciosos para sua família e amigos, usando ingredientes selecionados e muito amor.</p>
-            <p>O sucesso de suas criações não demorou a se espalhar, e logo as encomendas começaram a surgir. À medida que os elogios se multiplicavam e os sorrisos dos que provavam seus bolos se tornavam cada vez mais frequentes, Fernanda percebeu que estava diante de uma oportunidade única: transformar sua paixão em um negócio.</p>
-            <p>Assim, munida de coragem e determinação, ela mergulhou de cabeça no universo da confeitaria comercial. Pesquisou, estudou, experimentou. Aperfeiçoou suas técnicas, explorou novos sabores, descobriu tendências. Cada desafio foi encarado com entusiasmo, cada obstáculo, uma oportunidade de aprendizado.</p>
-            <p>E assim nasceu a Fernanda Bolos, um pequeno paraíso para os amantes de doces, onde a qualidade, a criatividade e o carinho são os ingredientes principais de cada receita. Aqui, cada bolo é uma obra de arte, meticulosamente elaborada para encantar os sentidos e despertar emoções.</p>
-            <p>Nossa missão vai além de simplesmente satisfazer o paladar dos nossos clientes. Queremos criar momentos especiais, transformar celebrações em memórias inesquecíveis, através dos nossos deliciosos produtos. Cada doce é uma pequena parte de nós, uma expressão do nosso amor pela confeitaria e pelo prazer de compartilhar bons momentos.</p>
-            <p>Por isso, convidamos você a fazer parte da nossa história, a se deliciar com nossas criações e a compartilhar conosco a doçura da vida. Seja bem-vindo à Fernanda Bolos, onde cada mordida é uma experiência única e cada cliente é um amigo que fazemos questão de conquistar.</p>
+            <h2 style="margin-top: 0;">Cadastro de Empresa</h2>
+            <form action="cadastro" method="post">
+                <div class="alert" style="<%= mensagem ? 'display: block;' : 'display: none;' %>">
+                    <%= mensagem %>
+                </div>
+                <div class="form-group">
+                    <label for="razao-social">Razão Social:</label>
+                    <input type="text" id ="rz" name="rz" placeholder="Razão Social" required>
+                </div>
+                <div class="form-group">
+                    <label for="cnpj">CNPJ:</label>
+                    <input type="text" id = "cnpj" name="cnpj" placeholder="CNPJ" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id = "cep" name="cep" placeholder="CEP" required>
+                </div>
+                <button type="submit" class="btn" onclick = "validacnpj(event)">Cadastrar</button>
+                <script>
+                    function validacnpj(event) {
+                        let cnpj = document.getElementById('cnpj').value; // Obter o valor do campo
+                        let qtd = cnpj.length;
+                                     
+                        if (qtd < 14) {
+                            window.alert("O CNPJ digitado é inválido, digite um CNPJ de 14 caracteres.");
+                        }else{
+                            window.alert("Empresa Cadastrada com Sucesso");
+                        }
+                        
+                    }
+
+                </script>
+
+            </form>
         </div>
     </section>
 </main>
