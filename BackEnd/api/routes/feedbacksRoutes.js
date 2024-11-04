@@ -4,6 +4,8 @@ const router = express.Router();
 
 const controllerFeedbacks = require('../controllers/feedbacksControllers');
 router.get('/indexfeedbacks', controllerFeedbacks.indexFeedbacks);
+router.get('/selectemp', controllerFeedbacks.selectemp);
+router.post('/cad', controllerFeedbacks.cad);
 
 
 
