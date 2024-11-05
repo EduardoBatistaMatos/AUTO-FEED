@@ -1,49 +1,65 @@
-const feedbacksModels = require("../models/feedbacksModels.js");
+const feedbacksModels = require("../models/feedbacksModels");
+
 module.exports = {
     indexFeedbacks,
-    selectemp,
+    lista,
     cad,
-    }
+};
 
 function indexFeedbacks(req, res) {
-    res.render('feedbacks.ejs', {
-        title:"feedbacks",
-    })
+    feedbacksModels.lista().then(results => {
+        res.render('feedbacks', {
+            title: "Feedback",
+            mensagem: "",
+            razao_social: results // Passa as razões sociais corretamente
+        });
+    }).catch(error => {
+        console.error("Erro ao obter razões sociais:", error);
+        res.status(500).render("feedbacks", {
+            title: "Feedback",
+            mensagem: "Erro ao carregar empresas"
+        });
+    });
 }
 
-function selectemp(req, res){
-         async (req, res) => {
-        try {
-            const empresas = await Empresa.findAll();
-            res.render('cad', { empresas }); // Passa as empresas para a view
-        } catch (err) {
-            res.status(500).json({ error: 'Erro ao listar empresas.' });
-        }
-    }
-};
+
+function lista() {
+    return new Promise((resolve, reject) => {
+        const m_sql = 'SELECT razao_social FROM empresas';  // Consulta no banco de dados
+        conexao.query(m_sql, [], (error, results) => {
+            if (error) {
+                console.error("Erro ao buscar razões sociais:", error);
+                reject(error);  // Rejeita a Promise se houver erro
+            } else {
+                console.log("Resultados obtidos:", results);  // Verifique os dados aqui
+                resolve(results);  // Resolve a Promise com os resultados da consulta
+            }
+        });
+    });
+}
+
 
 
 function cad(req, res) {
-    const empresa = req.body.empresa;
+    const razao_social = req.body.razao_social;
     const feedback = req.body.feedback;
-    
-    console.log("FeedBack recebida: " + feedback);
-    console.log("Empresa recebida: " + empresa);
-   
-    feedbacksModels.cad(empresa ,feedback,  function(erro, results) {
-            if (erro) {
-                console.error(erro);
-                return res.status(500).render("feedbacks.ejs", {
-                    title: "FeedBack",
-                    mensagem: "Erro ao cadastrar feedback"
-                });
-            } else {
-                console.log("Cadastro feito com Sucesso !!!");
-                res.render("feedbacks.ejs", {
-                    title: "FeedBack",
-                    mensagem: "FeedBack realizado com sucesso!"
-                });
-            }
-        });
-    }
 
+    console.log("FeedBack recebida: " + feedback);
+    console.log("razao_social recebida: " + razao_social);
+
+    feedbacksModels.cad(razao_social, feedback, function (erro, results) {
+        if (erro) {
+            console.error(erro);
+            return res.status(500).render("feedbacks.ejs", {
+                title: "Feedback",
+                mensagem: "Erro ao cadastrar feedback"
+            });
+        } else {
+            console.log("Cadastro feito com Sucesso !!!");
+            res.render("feedbacks.ejs", {
+                title: "Feedback",
+                mensagem: "Feedback realizado com sucesso!"
+            });
+        }
+    });
+}

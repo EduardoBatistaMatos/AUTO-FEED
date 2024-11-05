@@ -117,6 +117,21 @@
             padding: 10px 0;
             width: 100%;
         }
+
+        select {
+            width: 100%;  /* Garante que o dropdown ocupe toda a largura disponível */
+            padding: 10px; /* Adiciona espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            border: 1px solid #ccc; /* Borda leve */
+            background-color: #f9f9f9; /* Cor de fundo do dropdown */
+            font-size: 16px; /* Tamanho da fonte */
+        }
+
+        select:focus {
+            outline: none; /* Remove o contorno padrão do foco */
+            border-color: #4CAF50; /* Borda verde quando o elemento é selecionado */
+        }
+
     </style>
 </head>
 <body>
@@ -144,7 +159,12 @@
             <form action="cad" method="post">
                 <div class="form-group">
                     <label for="empresa">Empresa:</label>
-                   <button type="submit" class="btn" text="Nome da Empresa" required>
+                    <select id="empresa" name="empresa">
+                        <option value="">Selecione uma empresa</option>
+                        <% razao_social.forEach(function(empresa) { %>
+                            <option value="<%= empresa.razao_social %>"><%= empresa.razao_social %></option>
+                        <% }) %>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="feedback">Feedback:</label>
