@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 
 
 // Importa as rotas 
+const consultaRoutes = require('./api/routes/consultaRoutes');
 const empresasRoutes = require('./api/routes/empresasRoutes');
 const sobreRoutes = require('./api/routes/sobreRoutes');
 const criarcontaRoutes = require('./api/routes/criarcontaRoutes');
@@ -35,6 +36,8 @@ app.use(express.static('imagens'));
 app.use(express.static('js'));
 
 // Configuração de rotas
+
+app.use('/consulta', consultaRoutes);
 app.use('/empresas', empresasRoutes);
 app.use('/sobre' ,sobreRoutes);
 app.use('/criarconta' ,criarcontaRoutes);
