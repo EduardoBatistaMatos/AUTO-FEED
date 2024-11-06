@@ -39,7 +39,6 @@ function lista() {
 }
 
 
-
 function cad(req, res) {
     const razao_social = req.body.razao_social;
     const feedback = req.body.feedback;
@@ -47,6 +46,7 @@ function cad(req, res) {
     console.log("FeedBack recebida: " + feedback);
     console.log("razao_social recebida: " + razao_social);
 
+    // Chame a função para salvar os dados do feedback no banco
     feedbacksModels.cad(razao_social, feedback, function (erro, results) {
         if (erro) {
             console.error(erro);
@@ -56,10 +56,10 @@ function cad(req, res) {
             });
         } else {
             console.log("Cadastro feito com Sucesso !!!");
-            res.render("feedbacks.ejs", {
-                title: "Feedback",
-                mensagem: "Feedback realizado com sucesso!"
-            });
+
+            // Redireciona para o método GET para garantir que a lista de empresas seja carregada novamente
+            res.redirect('/feedbacks/indexfeedbacks');  // Isso chama o método indexFeedbacks
         }
     });
 }
+
