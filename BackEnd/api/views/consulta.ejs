@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Consulta</title>
+    <title><%= title %></title>
     <style>
         body {
             margin: 0;
@@ -90,29 +90,35 @@
 
 <header>
     <h1>Auto Feed</h1>
-    
 </header>
 
 <div class="nav-bar">
     <nav class="nav-left">
-        <a href="/sobre/indexsobre" class="icon">Sobre</a>                   
-        <a href="/empresas/indexemp" class="icon">Empresa</a>               
-        <a href="/feedbacks/indexfeedbacks" class="icon">Cadastar FeedBacks</a> 
-        <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>                               
+        <a href="/sobre/indexsobre" class="icon">Sobre</a>
+        <a href="/empresas/indexemp" class="icon">Empresa</a>
+        <a href="/feedbacks/indexfeedbacks" class="icon">Cadastrar Feedbacks</a>
+        <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>
     </nav>
-    <div class="nav-right">
-        <a href="" class="icon"></a>                        
-
-    </div>
 </div>
-
-
 
 <main>
     <section class="main-content">
         <div class="content">
             <h2 style="margin-top: 0;">Feedbacks</h2>
-            
+
+            <!-- Exibindo os feedbacks passados do controller -->
+            <% if (feedbacks && feedbacks.length > 0) { %>
+                <ul>
+                    <% feedbacks.forEach(function(feedback) { %>
+                        <li>
+                            <strong><%= feedback.razao_social %>:</strong> <%= feedback.feedback %>
+                        </li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p>Não há feedbacks disponíveis.</p>
+            <% } %>
+
         </div>
     </section>
 </main>

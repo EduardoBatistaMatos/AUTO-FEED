@@ -1,19 +1,13 @@
-const conexao = require('../config/conexao')
-
-console.log("Acessando Models Criar Conta...")
+const conexao= require('../config/conexao');  // Certifique-se de que a conexão com o banco está correta
 
 module.exports = {
-   cadastro,
+    consulta,
+};
+
+// Função que executa a consulta ao banco
+function consulta(callback){
+    conexao.query("SELECT razao_social, feedback FROM feedback", callback)
 }
 
-function cadastro(razao_social , cnpj, cep, callback) {
-    const m_sql = "INSERT INTO empresas (razao_social , cnpj, cep) VALUES (?, ?, ?)";
-    conexao.query(m_sql, [razao_social, cnpj, cep], callback);
-}
 
 
-
-
-
-
- 
