@@ -9,137 +9,131 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: white; /* Fundo principal branco */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garantir que o corpo preencha toda a altura */
+            background-color: #ad945e; 
         }
 
         header {
             display: flex;
             flex-direction: column;
             align-items: left;
-            background-color: purple;
+            background-color: yellow;
             padding: 20px;
                     
         }
+
         h1 {
         font-size: 36px;
-        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(73, 59, 29);
         margin: 0;
-        text-shadow: 
-        -2px -2px 0 rgba(0, 0, 0, 0.7),  
-        2px -2px 0 rgba(0, 0, 0, 0.7),
-        -2px 2px 0 rgba(0, 0, 0, 0.7),
-        2px 2px 0 rgba(0, 0, 0, 0.7);
+        
         }
+
 
         .nav-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: lavender; /* Faixa lilás */
-            padding: 5px 20px; /* Faixa fina */
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(243, 245, 157); 
+            padding: 5px 20px; 
         }
+
 
         .nav-left {
             display: flex;
-            gap: 30px; /* Aumentando o espaçamento entre os links */
+            gap: 30px; 
         }
 
         .icon {
-            color: black; /* Cor do texto dos links */
+            color: black; 
             text-decoration: none;
         }
 
         main {
             padding: 20px;
             display: flex;
-            flex: 1; /* Fazer o main ocupar o espaço restante */
-            justify-content: center; /* Centralizar o conteúdo horizontalmente */
-            align-items: center; /* Centralizar o conteúdo verticalmente */
+            flex: 1; 
+            justify-content: center; 
+            align-items: center; 
         }
 
-        .content {
-            background-color: beige;
-            padding: 40px; /* Aumentando o padding */
-            border-radius: 5px;
-            width: 500px; /* Largura do formulário aumentada */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column; /* Para empilhar os campos */
-            align-items: center; /* Centraliza os campos */
-        }
+       .content {
+           background-color: beige;
+           padding: 40px;
+           border-radius: 5px;
+           width: 800px; /* Aumentei a largura do contêiner para 800px */
+           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+           display: flex;
+           flex-direction: column;
+           align-items: center; 
+       }
 
         .form-group {
-            margin-bottom: 15px;
-            width: 100%; /* Fazendo o grupo de formulário ocupar toda a largura */
+            margin-bottom: 20px; /* Aumentado para mais espaço entre os campos */
+            width: 100%; 
         }
 
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            text-align: left; /* Alinhando o texto à esquerda */
+            text-align: left; 
         }
 
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; /* Largura ocupando toda a área */
+            padding: 12px; /* Aumentado o padding para mais espaço interno */
             border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: #e6e6fa; /* Campos lilás */
+            background-color: #e6e6fa; 
             font-size: 16px;
         }
 
         .form-group textarea {
-            height: 100px; /* Aumentando a altura do campo de feedback */
-            resize: none; /* Desabilitando o redimensionamento */
+            height: 150px; /* Aumentada a altura do campo de feedback */
+            resize: horizontal; /* Permitir redimensionamento vertical */
+        }
+
+        .form-group select {
+            height: 45px; /* Aumentada a altura do select */
         }
 
         .btn {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50; /* Botão verde */
-            color: black; /* Texto preto */
+            padding: 12px;
+            background-color: #4CAF50; 
+            color: black; 
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            font-size: 18px;
         }
 
         .btn:hover {
-            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+            background-color: #45a049; 
         }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            width: 100%;
-        }
+            position: fixed; /* Faz o footer ficar fixo */
+            bottom: 0; /* Posiciona o footer na parte inferior */
+            left: 0;
+            width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+            z-index: 10; /* Garante que o footer fique acima de outros conteúdos */
+}
 
-        select {
-            width: 100%;  /* Garante que o dropdown ocupe toda a largura disponível */
-            padding: 10px; /* Adiciona espaçamento interno */
-            border-radius: 5px; /* Bordas arredondadas */
-            border: 1px solid #ccc; /* Borda leve */
-            background-color: #f9f9f9; /* Cor de fundo do dropdown */
-            font-size: 16px; /* Tamanho da fonte */
-        }
 
-        select:focus {
-            outline: none; /* Remove o contorno padrão do foco */
-            border-color: #4CAF50; /* Borda verde quando o elemento é selecionado */
-        }
         .alert {
-        background-color: #f8d7da; /* Fundo vermelho claro */
-        color: #721c24; /* Texto vermelho escuro */
-        padding: 15px;
-        border: 1px solid #f5c6cb; /* Borda vermelho claro */
-        border-radius: 4px;
-        margin-bottom: 15px; /* Espaço abaixo do alerta */
-        display: none; /* Inicialmente escondido */
-        text-align: center;
+            background-color: #f8d7da; 
+            color: #721c24; 
+            padding: 15px;
+            border: 1px solid #f5c6cb; 
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none; 
+            text-align: center;
         }
     </style>
 </head>
@@ -147,12 +141,12 @@
 
 <header>
     <h1>Auto Feed</h1>
-    
 </header>
 
 <div class="nav-bar">
     <nav class="nav-left">
-        <a href="/sobre/indexsobre" class="icon">Sobre</a>                   
+        <a href="/sobre/indexsobre" class="icon">Sobre</a>
+        <a href="/contato/indexcontato" class="icon">Fale Conosco</a>                   
         <a href="/empresas/indexemp" class="icon">Empresa</a>               
         <a href="/feedbacks/indexfeedbacks" class="icon">Cadastar FeedBacks</a> 
         <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>                   
@@ -183,14 +177,14 @@
                             <option value="">Nenhuma empresa disponível</option>
                         <% } %>
                     </select>
-                    
-                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="feedback">Feedback:</label>
-                    <textarea name="feedback" id = "feedback"  placeholder="Escreva seu feedback aqui..." required></textarea>
+                    <textarea name="feedback" id="feedback" placeholder="Escreva seu feedback aqui..." required></textarea>
                 </div>
-                <button type="submit" class="btn" >Confirmar</button>
-                
+
+                <button type="submit" class="btn">Confirmar</button>
             </form>
         </div>
     </section>

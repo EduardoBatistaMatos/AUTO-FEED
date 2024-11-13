@@ -6,41 +6,45 @@
     <title>Tela de Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ad945e; 
         }
+
         header {
             display: flex;
             flex-direction: column;
             align-items: left;
-            background-color: purple;
+            background-color: yellow;
             padding: 20px;
                     
         }
+
         h1 {
         font-size: 36px;
-        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(73, 59, 29);
         margin: 0;
-        text-shadow: 
-        -2px -2px 0 rgba(0, 0, 0, 0.7),  
-        2px -2px 0 rgba(0, 0, 0, 0.7),
-        -2px 2px 0 rgba(0, 0, 0, 0.7),
-        2px 2px 0 rgba(0, 0, 0, 0.7);
+        
         }
+
+
         .nav-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: lavender; /* Faixa lilás */
-            padding: 5px 20px; /* Faixa fina */
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(243, 245, 157); 
+            padding: 5px 20px; 
         }
+
+
         .nav-left {
             display: flex;
-            gap: 30px; /* Aumentando o espaçamento entre os links */
+            gap: 30px; 
         }
         .icon {
-            color: black; /* Cor do texto dos links */
+            color: black; 
             text-decoration: none;
         }
         .nav-right {
@@ -49,11 +53,11 @@
         }
         .login-container {
             background-color: beige;
-            padding: 60px; /* Aumentado para um quadrado maior */
+            padding: 60px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 400px; /* Largura aumentada */
-            margin: 50px auto; /* Centraliza na página */
+            width: 400px; 
+            margin: 50px auto; 
         }
         .form-group {
             margin-bottom: 15px;
@@ -67,44 +71,48 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: #e6e6fa; /* Campos lilás */
+            background-color: #e6e6fa; 
             font-size: 16px;
         }
         .btn {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50; /* Botão verde */
-            color: black; /* Texto preto */
+            background-color: #4CAF50; 
+            color: black; 
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
         .btn:hover {
-            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+            background-color: #45a049; 
         }
         .link {
             text-align: center;
             margin-top: 10px;
         }
         h2 {
-            color: black; /* Palavra "Login" em preto */
+            color: black; 
         }
-
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            width: 100%;
-        }
+            position: fixed; 
+            bottom: 0; 
+            left: 0;
+            width: 100%; 
+            z-index: 10; 
+}
+
         .alert {
-        background-color: #f8d7da; /* Fundo vermelho claro */
-        color: #721c24; /* Texto vermelho escuro */
+        background-color: #f8d7da;
+        color: #721c24; 
         padding: 15px;
-        border: 1px solid #f5c6cb; /* Borda vermelho claro */
+        border: 1px solid #f5c6cb; 
         border-radius: 4px;
-        margin-bottom: 15px; /* Espaço abaixo do alerta */
-        display: none; /* Inicialmente escondido */
+        margin-bottom: 15px; 
+        display: none;
         text-align: center;
         }
 

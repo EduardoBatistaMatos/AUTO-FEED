@@ -9,49 +9,44 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: white; /* Fundo principal branco */
+            background-color: #ad945e; 
         }
 
         header {
             display: flex;
             flex-direction: column;
             align-items: left;
-            background-color: purple;
+            background-color: yellow;
             padding: 20px;
                     
         }
 
         h1 {
         font-size: 36px;
-        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(73, 59, 29);
         margin: 0;
-        text-shadow: 
-        -2px -2px 0 rgba(0, 0, 0, 0.7),  
-        2px -2px 0 rgba(0, 0, 0, 0.7),
-        -2px 2px 0 rgba(0, 0, 0, 0.7),
-        2px 2px 0 rgba(0, 0, 0, 0.7);
+        
         }
 
-
-
-
-       
 
         .nav-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: lavender; /* Faixa lilás */
-            padding: 5px 20px; /* Faixa fina */
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(243, 245, 157); 
+            padding: 5px 20px; 
         }
+
 
         .nav-left {
             display: flex;
-            gap: 30px; /* Aumentando o espaçamento entre os links */
+            gap: 30px; 
         }
 
         .icon {
-            color: black; /* Cor do texto dos links */
+            color: black; 
             text-decoration: none;
         }
 
@@ -75,15 +70,18 @@
             border-radius: 5px;
         }
 
+       
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 10; 
+}
     </style>
 </head>
 <body>
@@ -95,8 +93,9 @@
 <div class="nav-bar">
     <nav class="nav-left">
         <a href="/sobre/indexsobre" class="icon">Sobre</a>
-        <a href="/empresas/indexemp" class="icon">Empresa</a>
-        <a href="/feedbacks/indexfeedbacks" class="icon">Cadastrar Feedbacks</a>
+        <a href="/contato/indexcontato" class="icon">Fale Conosco</a>                   
+        <a href="/empresas/indexemp" class="icon">Empresa</a>               
+        <a href="/feedbacks/indexfeedbacks" class="icon">Cadastar FeedBacks</a> 
         <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>
     </nav>
 </div>

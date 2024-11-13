@@ -9,27 +9,24 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* Fundo cinza claro */
+            background-color: #ad945e; 
         }
 
         header {
             display: flex;
             flex-direction: column;
             align-items: left;
-            background-color: purple;
+            background-color: yellow;
             padding: 20px;
                     
         }
 
         h1 {
         font-size: 36px;
-        color: white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(73, 59, 29);
         margin: 0;
-        text-shadow: 
-        -2px -2px 0 rgba(0, 0, 0, 0.7),  
-        2px -2px 0 rgba(0, 0, 0, 0.7),
-        -2px 2px 0 rgba(0, 0, 0, 0.7),
-        2px 2px 0 rgba(0, 0, 0, 0.7);
+        
         }
 
 
@@ -37,17 +34,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: lavender; /* Faixa lilás */
-            padding: 5px 20px; /* Faixa fina */
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(243, 245, 157); 
+            padding: 5px 20px; 
         }
+
+
 
         .nav-left {
             display: flex;
-            gap: 30px; /* Aumentando o espaçamento entre os links */
+            gap: 30px; 
         }
 
         .icon {
-            color: black; /* Cor do texto dos links */
+            color: black; 
             text-decoration: none;
         }
 
@@ -67,7 +67,7 @@
             padding: 40px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 400px; /* Largura do formulário */
+            width: 400px; 
             text-align: left;
             
         }
@@ -87,41 +87,42 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: #e6e6fa; /* Campos lilás */
+            background-color: #e6e6fa; 
             font-size: 16px;
         }
 
         .btn {
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50; /* Botão verde */
-            color: black; /* Texto preto */
+            background-color: #4CAF50; 
+            color: black; 
             border: none;
             border-radius: 4px;
             cursor: pointer;
         }
 
         .btn:hover {
-            background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+            background-color: #45a049; 
         }
-
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            width: 100%;
-            bottom: 0;
-        }
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+}
         .alert {
-        background-color: #f8d7da; /* Fundo vermelho claro */
-        color: #721c24; /* Texto vermelho escuro */
+        background-color: #f8d7da; 
+        color: #721c24; 
         padding: 15px;
-        border: 1px solid #f5c6cb; /* Borda vermelho claro */
+        border: 1px solid #f5c6cb; 
         border-radius: 4px;
-        margin-bottom: 15px; /* Espaço abaixo do alerta */
-        display: none; /* Inicialmente escondido */
+        margin-bottom: 15px; 
+        display: none; 
         text-align: center;
         }
     </style>
@@ -135,10 +136,11 @@
 
 <div class="nav-bar">
     <nav class="nav-left">
-        <a href="/sobre/indexsobre" class="icon">Sobre</a>                   
+        <a href="/sobre/indexsobre" class="icon">Sobre</a>
+        <a href="/contato/indexcontato" class="icon">Fale Conosco</a>                   
         <a href="/empresas/indexemp" class="icon">Empresa</a>               
         <a href="/feedbacks/indexfeedbacks" class="icon">Cadastar FeedBacks</a> 
-        <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>        
+        <a href="/consulta/indexconsulta" class="icon">Consultar Feedbacks</a>
     </nav>
     <div class="nav-right">
         
